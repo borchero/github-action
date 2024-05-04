@@ -105,6 +105,10 @@ runs:
         echo $PATH
         ls /home/runner/work/octofolio/octofolio/.pixi/envs/terraform/bin
         sudo echo $PATH
+        which tailscale
+        sudo -E which tailscale
+        which tailscaled
+        sudo -E which tailscaled
         sudo -E /home/runner/work/octofolio/octofolio/.pixi/envs/terraform/bin/tailscaled --state=mem: ${ADDITIONAL_DAEMON_ARGS} 2>~/tailscaled.log &
         # And check that tailscaled came up. The CLI will block for a bit waiting
         # for it. And --json will make it exit with status 0 even if we're logged
